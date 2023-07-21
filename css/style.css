@@ -1,0 +1,576 @@
+/* Google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Yeseva+One&display=swap');
+
+/* Common and reset code starts here  */
+:root {
+    --yeseva-font : 'Yeseva One', cursive;
+    --lato-font : 'Lato', sans-serif;
+    --open-sans-font : 'Open Sans', sans-serif;
+    --gentium-font : 'Gentium Book Plus', serif;
+    --nav-icon-color : #dab33e;
+    --heading-color : #cc9900;
+    --p-color : #4c4c4c;
+    --form-h3-color : #c9a131;
+    --fonm-btn-bg-color : #cc9900;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+/* Common and reset code ends here  */
+
+/* Header and Nav bar section starts here  */
+.header_section {
+    background-image: url(../images/header_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.logo {
+    width: 80px;
+}
+.navbar {
+    background: rgba(76, 35, 9, 0.799) !important;
+    padding-right: 30px !important;
+
+}
+.nav-item {
+    margin-right: 25px;
+}
+.nav-item:nth-last-child(1) {
+    margin-right: 0;
+}
+.nav-link {
+    font-family: var(--gentium-font);
+    font-weight: 700;
+    font-size: 21px;
+    color : white;
+    transition: 0.4s;
+    position: relative;
+}
+.nav-link:hover {
+    color : yellowgreen;
+}
+.nav-link::before {
+    position: absolute;
+    content: "";
+    background:  yellowgreen;
+    left: 0;
+    bottom: 5px;
+    width: 0%;
+    height: 2px;
+    transition: 0.4s;
+}
+.nav-link:hover::before {
+    width: 90%;
+}
+.nav-link i {
+    color : var(--nav-icon-color);
+    margin-right: 10px;
+}
+
+.nav-link:nth-last-child(1):hover {
+    background: transparent;
+}
+.nav-link i:nth-child(3) {
+    margin-right: 0;
+}
+.nav-link i {
+    transition: 0.4s;
+}
+.nav-link i:hover {
+    color : #000;
+}
+.slider h1 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 80px;
+    color : #fff;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.slider_btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 20px;
+}
+.slider_btn_1 {
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background: #0000007a;
+    color : #fff;
+    border : none;
+    transition: 0.3s;
+    position: relative;
+}
+.slider_btn_1:hover {
+    color : #000;
+    z-index: 100;
+}
+.slider_btn_1::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #ffffffc9;
+    transition: 0.3s;
+    z-index: -100;
+}
+.slider_btn_1:hover::before {
+    width: 100%;
+   
+}
+.slider_btn_2 {
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background: #ffffff31;
+    color : #fff;
+    border : none;
+    transition: 0.3s;
+    position: relative;
+}
+.slider_btn_2:hover {
+    color : #fff;
+    z-index: 100;
+}
+.slider_btn_2::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #000000c0;
+    transition: 0.3s;
+}
+.slider_btn_2:hover::before {
+    width: 100%;
+    z-index: -100;
+}
+@media only screen and (max-width : 992px) {
+    .slider h1 {
+        margin-top: 80px;
+        font-size: 60px;
+    }
+}
+@media only screen and (max-width : 576px) {
+    .slider h1 {
+        font-size: 40px;
+    }
+    .slider_btn {
+        flex-direction: column;
+    }
+}
+/* Header and Nav bar section ends here  */
+
+/* About section starts here  */
+.about_section {
+    background-image: url(../images/menu_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
+.about_text h2 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 35px;
+    color : #cc9900;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.about_text p {
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    color : #4c4c4c;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.about_dish img, .cooker_img {
+    cursor: pointer;
+}
+@media only screen and (max-width : 992px) and (min-width : 576px) {
+    .about_dish {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* About section ends  here  */
+
+/* Ingredients section starts here  */
+.ingredients_section {
+    background-image: url(../images/ingredient_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    color : white;
+}
+.ingredints_box {
+    background: #000000b5;
+    padding: 50px;
+}
+.ingredints_box h2 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.ingredints_box p {
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400;
+    font-size: 16x;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.ingredient_dishes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ingredient_dishes img {
+    width: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ingredient_dishes img:hover {
+    border-radius: 50%;
+    box-shadow: rgba(251, 239, 239, 0.74) 0px 0px 6px 0.6px;
+}
+/* Ingredients section ends here  */
+
+/* Menu section starts here  */
+.menu_section {
+    background-image: url(../images/menu_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
+.menu_wrapper {
+    text-align: center;
+}
+.menu_wrapper h2 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 35px;
+    color : #cc9900;
+}
+.menu_name {
+    border-bottom: 1px solid #cc9900;
+}
+.menu_name h3 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    color : #cc9900;
+}
+.menu_info {
+    text-align: left;
+}
+.menu_info p {
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    color : #4c4c4c
+}
+.menu_item {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.special_item {
+    border : 1px solid #cc9900;
+}
+.special_tag {
+    background: #cc9900c9;
+    padding : 5px;
+    position: absolute;
+    right : 0;
+    top : -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.special_tag h5 {
+    color : white;
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+}
+/* Menu section ends here  */
+
+/* Review section starts here  */
+.review_section {
+    background-image: url(../images/review_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    color : #fff;
+}
+.review_box {
+    background: #000000b5;
+    padding: 50px;
+    transition: 0.4s;
+}
+.review_box:hover {
+    box-shadow: rgba(251, 239, 239, 0.74) 0px 0px 4px 0.2px;
+}
+.review_box h2 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.review_text p {
+    font-family: 'Gentium Book Plus', serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.review_text {
+    position: relative;
+}
+.review_text i {
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    font-size: 25px;
+    color : #ffffffaf;
+}
+.review_box span {
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400;
+    font-size: 18px;
+}
+@media only screen and (max-width : 576px) {
+    .review_box p {
+        text-align: justify;
+    }
+}
+/* Review section ends here  */
+
+/* Reservation section starts here */
+.reservation_section {
+    background-image: url(../images/menu_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+.reservation_text h2 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 35px;
+    color : #cc9900;
+    margin-bottom: 10px;
+}
+.reservation_text p {
+    font-family: 'Lato', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    color : #4c4c4c;
+    margin-top: 15px;
+}
+.reservation_img {
+    display: flex;
+}
+.reservation_img img {
+    cursor: pointer;
+}
+.form_part label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color : #c9a131;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.reservation_form {
+    align-items: center;
+    justify-content: center;
+}
+.form_part input, .form_part select {
+    padding: 5px 10px;
+    border : 1px solid #00000031;
+    outline : none;
+    width: 100%;
+}
+.form_part select {
+    width: 100%;
+}
+.form_part input:focus {
+    border : 1px solid #c9a131;
+}
+.form_part select:focus {
+    border : 1px solid #c9a131;
+}
+.form_part input::placeholder{
+    font-style: italic;
+}
+.date_icon {
+    position: relative;
+}
+.date_icon i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color : #00000063;
+}
+.reservation_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.reservation_btn button {
+    color : white;
+    background:  #cc9900;
+    border : none;
+    padding: 5px 40px;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+.reservation_btn button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    content: "";
+    background: #000;
+    transition: 0.4s;
+    z-index: -100;
+}
+.reservation_btn button:hover::before {
+    height: 50%;
+}
+.reservation_btn button::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    content: "";
+    background: #000;
+    transition: 0.4s;
+    z-index: -100;
+}
+.reservation_btn button:hover::after {
+    height: 50%;
+}
+@media only screen and (min-width : 1200px ) {
+    .reservation_img {
+        gap : 20px;
+    }
+}
+@media only screen and (max-width : 1200px) and (min-width : 992px) {
+    .reservation_img {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .reservation_form {
+        justify-content : space-around !important;
+    }
+}
+@media only screen and (max-width : 992px) and (min-width : 768px) {
+    .reservation_img {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .reservation_form {
+        justify-content : space-evenly !important;
+    }
+}
+@media only screen and (max-width : 768px) and (min-width : 576px) {
+    .reservation_img {
+        align-items: center;
+        justify-content: space-evenly;
+        gap : 20px;
+    }
+    .reservation_form {
+        justify-content : space-between !important;
+    }
+}
+@media only screen and (max-width : 576px) and (min-width : 320px) {
+    .reservation_img {
+        align-items: center;
+        justify-content: center;
+    }
+    .reservation_img img:nth-child(1) {
+        display: none;
+    }
+    .reservation_form {
+        flex-direction: column;
+    }
+
+}
+/* Reservation section starts here */
+
+/* Footer section starts here  */
+.footer_section {
+    background: #000;
+    padding: 50px 0;
+    color : #fff;
+}
+.footer_text h3 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.footer_text p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.payment_methods {
+    /* border :1px solid white; */
+    display: flex;
+    justify-content: center;
+    gap : 10px;
+}
+.payment_methods i {
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 18px;
+}
+.payment_methods i:hover {
+    color : #c9a131;
+}
+.footer_social {
+    display: flex;
+    justify-content: center;
+    gap : 15px;
+}
+.footer_social i {
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 18px;
+}
+.footer_social i:hover {
+    color : #c9a131
+}
+/* Footer section ends here  */
